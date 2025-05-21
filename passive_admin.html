@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/passive_admin.css">
+    <title>Passive Reports Panel</title>
+</head>
+<body>
+    <nav>
+        <div class="login"><a href=""><span>Logo</span></a></div>
+        <ul>
+            <li><a href="admin.html">Home</a></li>
+            <li><a href="#">Quick Report</a></li>
+            <li><a href="passive_admin.html">Passive Report</a></li>
+        </ul>
+        <div class="login">
+            <a href="#"><span class="login-icon"><i class="fa-solid fa-user"></i></span></a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Passive Reports</h1>
+        <div id="loading" class="loading">Loading reports...</div>
+        <div id="error" class="error hidden"></div>
+        <table id="reports-table" class="hidden">
+            <thead>
+                <tr>
+                    <th>Survivor Gender</th>
+                    <th>Date of Birth</th>
+                    <th>Date of Incident</th>
+                    <th>Report Type</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody id="reports-body"></tbody>
+        </table>
+    </div>
+    <script src="/passive_admin.js"></script>
+</body>
+</html>

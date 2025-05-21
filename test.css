@@ -1,0 +1,271 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: margin-top 0.3s ease;
+    background-color: #E0E0E0;
+}
+/* Main part of the webpage */
+.contact .head {
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 30px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.contact .head h2 {
+    font-size: 24px;
+    color: #333;
+    box-shadow: 0 4px 8px #0000001a;
+    height: 60px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background-color: #aca4a4;
+}
+
+/* Emergency Contacts Section */
+.emergency-contacts {
+    padding: 20px;
+    text-align: center;
+    background-color: #aca4a4;
+    background-image: url("picture/autor.png");
+    background-size: cover;
+}
+
+.emergency-contacts h2 {
+    font-size: 30px;
+    color: #000000; /* Dark blue */
+    margin-bottom: 20px;
+}
+
+/* Container for Dropdowns */
+.dropdown {
+    position: relative;
+    width: 250px;
+}
+.dropdown-checkbox {
+    display: none;
+}
+.dropbtn {
+    display: block;
+    background-color: #003087;
+    color: #FFFFFF;
+    padding: 12px 16px;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.dropbtn:hover {
+    background-color: #6EB1D6;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    z-index: 10;
+    padding: 10px;
+    cursor: pointer;
+
+}
+.dropdown-checkbox:checked ~ .dropdown-content {
+    display: block;
+}
+.dropdown-content .dropdown {
+    width: 100%;
+}
+.dropdown-content .dropbtn {
+    background-color: #D32F2F;
+    font-weight: normal;
+    padding: 10px 14px;
+    margin: 5px 0;
+}
+.dropdown-content .dropbtn:hover {
+    background-color: #B71C1C;
+}
+.dropdown-content .dropdown-content {
+    position: static;
+    box-shadow: none;
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+.dropdown-content p {
+    margin: 5px 0;
+    color: #212121;
+    font-size: 0.9rem;
+}
+.copy-text {
+    font-weight: bold;
+}
+
+.popup {
+    position: absolute;
+    bottom: -20px; /* Default: below dropdown-content */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+/* Footer Styling */
+.footer {
+    background-color: #003087;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+    display: flex; /* Make footer a flex container */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 200px; /* Ensure enough height for layout */
+    bottom: -240px;
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    flex-grow: 1; /* Allow content to take available space */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #F57C00;
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.bottom p{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+
+
+    /* Main Section */
+    .contact .head h2 {
+        font-size: 20px;
+        width: 120px;
+        height: 50px;
+    }
+
+    /* Dropdowns */
+    .dropdown-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 55px;
+        margin-bottom: 20px;
+    }
+    .dropdown {
+        width: 90%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .dropbtn {
+        font-size: 18px;
+    }
+    .dropdown-content {
+        min-height: 80px;
+    }
+    .dropdown-content p {
+        font-size: 16px;
+    }
+    /* Popup Specific for 768px */
+    .popup {
+        bottom: -5px; /* Position below dropdown-content on mobile */
+        font-size: 20px;
+    }
+    /* Footer */
+    .footer {
+        min-height: 120px;
+        position: relative;
+    }
+    .footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .footer-section {
+        min-width: 100%;
+        text-align: center;
+    }
+    .footer-section h3 {
+        font-size: 16px;
+    }
+    .footer-section p {
+        font-size: 12px;
+    }
+    .bottom p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+   
+    /* Main Section */
+    .contact .head h2 {
+        font-size: 18px;
+        width: 100px;
+        height: 40px;
+    }
+    .emergency-contacts h2 {
+        font-size: 24px;
+    }
+
+    /* Dropdowns */
+    .dropdown {
+        width: 100%;
+    }
+    .dropbtn {
+        font-size: 16px;
+    }
+}
