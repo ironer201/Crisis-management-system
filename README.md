@@ -1,12 +1,62 @@
-# Crisis-management-system
-This website use to HTML CSS javascript and NodeJS. 
-if anyone want to use the website they need to install NodeJs into there PC and use the npm express body-parser multer in the VS code.
-Data is stored in Database use by a text file.
-The crisis management system is website that will work like a 999 / 911 system but it will work in the online. 
-Basically it take a report from a victim and it will show the admin panel about the report and the admin will reinform the authority so that they can take step. People can see that authroity contact details so that they can call them if needed also they can donate to use 
-I reason I use txt base database so that every one can use the project 
+# National Crisis Response
 
-My other project mate Townid Alam Touki aka townidalam give me this idea and design the donation page, statistics page 
-I have code the server.js and other page
+A web-based crisis management platform that enables citizens to report incidents, submit anonymous passive reports, register as volunteers, and allows authorities to monitor and respond to crises efficiently.
 
-Problem: The project is mostly complete but not fully the sms system is created but the reported system works 
+## Features
+
+- **Quick Reports** — Submit emergency reports instantly from the home page
+- **Passive Reporting** — Anonymous reporting for crimes like extortion, harassment, and eve-teasing, helping victims come forward safely
+- **Volunteer Registration** — Citizens can register to assist during crises
+- **Admin Dashboard** — Separate admin panel to view and manage quick reports, passive reports, and volunteer registrations
+- **User Authentication** — Sign up and login system for secure access
+- **Donation Page** — Support the platform through donations
+- **Statistics Page** — Visual insights into reported incidents
+- **Responsive Design** — Works across desktop and mobile devices
+
+## Tech Stack
+
+- **Frontend** — HTML, CSS, JavaScript
+- **Backend** — Node.js with Express.js
+- **Storage** — File-based (JSON/txt)
+- **Key Dependencies** — `express`, `body-parser`, `multer`
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v12 or higher)
+- npm
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Start the server
+npm start
+```
+
+The application will be available at `http://localhost:3000`.
+
+## Project Structure
+
+```
+├── index.html              # Home page with quick report
+├── passive.html            # Anonymous passive report form
+├── volunteer.html          # Volunteer registration
+├── admin.html              # Admin panel - quick reports
+├── passive_admin.html      # Admin panel - passive reports
+├── volunteer_admin.html    # Admin panel - volunteer data
+├── login.html              # User login page
+├── Donation.html           # Donation/funding page
+├── statistics.html         # Incident statistics
+├── contact.html            # Contact page
+├── author.html             # Authorities page
+├── server.js               # Express backend
+├── admin panel/            # Admin panel assets
+└── picture/                # Image assets
+```
+
+## License
+
+MIT
